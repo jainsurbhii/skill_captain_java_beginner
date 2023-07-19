@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class grocerylist {
     public static List<String> grocerylist = new ArrayList<>();
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("Please select:Enter your choice (1-5):");
             System.out.println("1 Add item");
@@ -16,6 +16,8 @@ public class grocerylist {
             System.out.println("5 Clear List");
             int choice = sc.nextInt();
             sc.nextLine();
+
+
             switch (choice) {
                 case 1:
                     addItem(sc);
@@ -37,17 +39,17 @@ public class grocerylist {
                     System.out.println("Invalid choice");
             }
         }
-
     }
+
     public static void addItem(Scanner sc){
         System.out.print("Enter the item to add: ");
         String item = sc.next();
         grocerylist.add(item);
     }
     public static void removeItem(Scanner sc){
-        System.out.print("Enter the item to add: ");
+        System.out.print("Enter the item to remove: ");
         String item = sc.next();
-        grocerylist.add(item);
+        grocerylist.remove(item);
     }
     public static void groceryList(Scanner sc){
         System.out.println("Grocery List:");
