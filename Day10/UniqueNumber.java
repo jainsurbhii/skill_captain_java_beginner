@@ -6,17 +6,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        HashSet<Integer> nameset = new HashSet<Integer>();
+        Set<Integer> nameset = new HashSet<Integer>();
         Scanner in = new Scanner(System.in);
         for(int i = 0; i < 5; i++){
-            int t=in.nextInt();
-            if(nameset.contains(t))
+            int intputValue=in.nextInt();
+            if(nameset.contains(intputValue))
             {
                 System.out.println("Duplicate");
             }
             else {
                 System.out.println("Unique");
-                nameset.add(t);
+                nameset.add(intputValue);
             }
             in.close;
         }
